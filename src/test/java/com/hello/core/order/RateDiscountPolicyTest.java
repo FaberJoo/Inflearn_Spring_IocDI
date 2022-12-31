@@ -28,9 +28,6 @@ public class RateDiscountPolicyTest {
         Member member = new Member(1L, "MemberVip", Grade.VIP);
         int discount = discountPolicy.discount(member, 10000);
         int discountPrice = 1000;
-        if (discountPolicy instanceof RateDiscountPolicy) {
-            discountPrice = 2000;
-        }
         Assertions.assertThat(discount).isEqualTo(discountPrice);
     }
 

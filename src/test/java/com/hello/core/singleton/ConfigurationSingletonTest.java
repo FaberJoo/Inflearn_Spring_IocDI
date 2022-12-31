@@ -30,7 +30,7 @@ public class ConfigurationSingletonTest {
   }
 
   @Test
-  @DisplayName("ㅁ")
+  @DisplayName("AppConfig 바이트 조작 확인")
   void configurationDeep() {
     ApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
 

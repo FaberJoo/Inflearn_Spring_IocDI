@@ -6,7 +6,6 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import com.hello.core.member.Grade;
 import com.hello.core.member.Member;
 import com.hello.core.member.MemberService;
-import com.hello.core.member.MemberServiceImpl;
 
 public class MemberApp {
     public static void main(String[] args) {
