@@ -14,17 +14,17 @@ import com.hello.core.member.MemberRepository;
 public class OrderServiceImpl implements OrderService {
     private final MemberRepository memberRepository;
     @Autowired
-    private final DiscountPolicy discountPolicy;
+    private final DiscountPolicy rateDiscountPolicy;
 
-    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
+    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy rateDiscountPolicy) {
         this.memberRepository = memberRepository;
-        this.discountPolicy = discountPolicy;
+        this.rateDiscountPolicy = rateDiscountPolicy;
     }
 
     @Override
     public Order createOrder(Long memberId, String itemName, int itemPrice) {
         Member member = memberRepository.findById(memberId);
-        int discountPrice = discountPolicy.discount(member, itemPrice);
+        int discountPrice = rateDiscountPolicy.discount(member, itemPrice);
         return new Order(memberId, itemName, itemPrice, discountPrice);
     }
 
