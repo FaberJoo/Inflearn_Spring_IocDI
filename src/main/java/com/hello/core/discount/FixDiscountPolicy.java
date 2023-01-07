@@ -7,7 +7,6 @@ import com.hello.core.member.Grade;
 import com.hello.core.member.Member;
 
 @Component
-@Qualifier("fixDiscountPolicy")
 public class FixDiscountPolicy implements DiscountPolicy {
     private int discountFixAmount = 1000;
 

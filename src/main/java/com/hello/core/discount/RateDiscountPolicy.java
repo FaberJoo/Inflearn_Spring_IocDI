@@ -8,7 +8,7 @@ import com.hello.core.member.Grade;
 import com.hello.core.member.Member;
 
 @Component
-@Qualifier("rateDiscountPolicy")
+@Primary
 public class RateDiscountPolicy implements DiscountPolicy {
     private int discountRate = 10;
 
