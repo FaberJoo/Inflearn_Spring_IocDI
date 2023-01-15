@@ -8,5 +8,4 @@ import org.springframework.context.annotation.ComponentScan.Filter;
 @Configuration
 @ComponentScan(excludeFilters = @Filter(type = FilterType.ANNOTATION, classes = Configuration.class))
 public class AutoAppConfig {
-  private int a = 0;
 }
